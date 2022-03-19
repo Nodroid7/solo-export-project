@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BASE_DIR="$(dirname "$(realpath "$0")")"
+
+hexdump -n 9 -v -e '6/1 "%_p"  " "  3/1 "%02X "  "\n"' "$@"
+hexdump -s 9 -n 4087 -v -f "$BASE_DIR"/format_SOLO_header.hexdump "$@"
+hexdump -s 4096 -n 4096 -v -f "$BASE_DIR"/format_SOLO_extra.hexdump "$@"
+hexdump -s 8k -v -f "$BASE_DIR"/format_SOLO_data.hexdump "$@"
+
