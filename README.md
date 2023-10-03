@@ -1,3 +1,4 @@
+|auther: spider
 # Data export tool for SOLOII.DAT binary file
 
 This is a data export tool to extract data from the **Geo Solo II Energy Display** `SOLOII.DAT` binary data file.
